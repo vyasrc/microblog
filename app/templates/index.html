@@ -1,13 +1,19 @@
 {% extends "base.html" %}
 
 {% block app_content %}
-    <h1>You're doing it!</h1>
+    <h1>My Blog Posts</h1>
     <br>
     <table class="table table-hover">
         <tr>
             <td>
                 <br>
                 <span id="post1">This is my one and only blog post. Can you add more using a for loop?</span>
+                <br>
+                {% for post in posts %}
+                    <br>
+                    <div>{{ post.body }}</div>
+                {% endfor %}
+                
             </td>
         </tr>
     </table>
